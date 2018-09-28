@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   toMichael.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamateo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/25 10:41:41 by mamateo           #+#    #+#             */
+/*   Updated: 2018/06/25 11:22:46 by mamateo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+There are '3' types of allocating memory: "static, dynamic, and automatic":
+I will only define "dynamic and static."
+
+1) What is "Dynamic memory"?
+ 		It is a memory allocated(distributed) at runtime using "calloc(), malloc()," and others'.
+		Also known as "heap", but has no relation to the heap data structure.
+1e. C example below:
+
+xtra: "calloc()" and "malloc()" are library functions that allocate(distribute) memory dynamically
+For reference: "https://www.geeksforgeeks.org/calloc-versus-malloc/"
+xtra: "heap" is basically a portion of where memory is "dynamically allocated" residing
+For reference: "https://stackoverflow.com/questions/2308751/what-is-a-memory-heap"
+
+int * a = malloc(sizeof(int));
+The heap mem. is persistent(constant),
+until free() is called upon to give freedom to the mem caged in the city of function.
+In other words, we can control the lifetime of the variable.
+
+2) What is Static memory?
+ 		It is the memory for a variables that are allocated(distributed) when a program starts
+
+2e. C examples below:
+
+int a = 32; //used "outside" of function
+static int a = 32; //used "inside" of a function
+
+extern and static = separate clases of variables in C
+
+extern int a; //declaration
+int a; //definition(existence)
